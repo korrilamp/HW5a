@@ -5,15 +5,15 @@
 		<title>HTML 5 Doc</title>
 	</head>
 	<body>
-		<form>
+		<form method="get">
 			First Number:<input type="text" name="entryOne"><br>
 			Second Number:<input type="text" name="entryTwo"><br>
 			Your Numbers: <span id="userInput"></span><br />
-			<button onclick="readDisplayNums()">Click me</button>
+			<input type="button" value="Submit" onClick="writeValues(form)">
 		</form>
 		<p id="demo"></p>
 		<script language="javascript">
-			function readDisplayNums(form){
+			window.writeValues = function(form){
 				var first = form.entryOne.value;
   				var second = form.entryTwo.value;
 				document.getElementById('userInput').innerHTML = first + " " + second;
