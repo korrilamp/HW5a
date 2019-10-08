@@ -5,10 +5,22 @@
 		<title>HTML 5 Doc</title>
 	</head>
 	<body>
-		<form>
-			<input type="text" name="entryOne">
-			<input type="text" name="entryTwo">
+		<form id="form1">
+			First Number:<input type="text" name="entryOne"><br>
+			Second Number:<input type="text" name="entryTwo"><br>
 			<button onclick="readDisplayNums()">Click me</button>
 		</form>
+		<p id="demo"></p>
+		<script language="javascript">
+			function readDisplayNums(){
+				  var x = document.getElementById("form1");
+				  var text = "";
+				  var i;
+				  for (i = 0; i < x.length ;i++) {
+				    text += x.elements[i].value + "<br>";
+				  }
+				  document.getElementById("demo").innerHTML = text;
+			}
+		</script>
 	</body>
 </html>
