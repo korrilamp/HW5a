@@ -5,7 +5,7 @@
 		<title>HTML 5 Doc</title>
 	</head>
 	<body>
-		<form id="form1">
+		<form>
 			First Number:<input type="text" name="entryOne"><br>
 			Second Number:<input type="text" name="entryTwo"><br>
 			Your Numbers: <span id="userInput"></span><br />
@@ -13,7 +13,7 @@
 		</form>
 		<p id="demo"></p>
 		<script language="javascript">
-			function readDisplayNums(){
+			function readDisplayNums(form){
 				var first = form.entryOne.value;
   				var second = form.entryTwo.value;
 				document.getElementById('userInput').innerHTML = first + " " + second;
