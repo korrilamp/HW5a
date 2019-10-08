@@ -18,6 +18,18 @@
   				var second = form.entryTwo.value;
 				document.getElementById('userInput').innerHTML = first + ", " + second;
 			}
+
+			function isFactor(num,testNum){
+				if(num%testNum=0){
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+			isFactor(10,5);
+			isFactor(50,5);
+			isFactor(43,5);
 		</script>
 	</body>
 </html>
