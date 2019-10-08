@@ -38,6 +38,14 @@
 			//tests:
 			var a = [1,2,3,4];
 			showFactors(a);
+			function addFactors(numArray){
+				for(i=0;i<numArray.length;i+=1){
+					sum += numArray[i];
+					return sum;
+				}
+			}
+			var a = [1,2,3,5];
+			document.write(addFactors(a));
 		</script>
 	</body>
 </html>
