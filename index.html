@@ -28,12 +28,14 @@
   				factorsB = getFactors(second);
 				showFactors(factorsA);
 				showFactors(factorsB);
+				document.write(addFactors(factorsB));
+				document.write(" ");
+				document.write(addFactors(factorsA));
   				if ((addFactors(factorsA)) == second){
 					document.write("entered first conditional");
-					document.write(addFactors(factorsB));
 					document.write(first);
+					document.write(second);
   					if((addFactors(factorsB)) == first){
-						document.write("TRUTH")
   						document.write("The numbers are amicable!");
   					}
   					else if((addFactors(factorsB)) != first){
