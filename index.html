@@ -9,7 +9,7 @@
 			First Number:<input type="text" name="entryOne"><br>
 			Second Number:<input type="text" name="entryTwo"><br>
 			Your Numbers: <span id="userInput"></span><br />
-			<input type="button" value="Submit" onClick="isAmicable(form)">
+			<input type="button" value="Submit" onClick="writeValues(form)">
 		</form>
 		<p id="demo"></p>
 		<script language="javascript">
@@ -17,6 +17,7 @@
 				var first = form.entryOne.value;
   				var second = form.entryTwo.value;
 				document.getElementById('userInput').innerHTML = first + ", " + second;
+				isAmicable(form)
 			}
 			
 			function isAmicable(form){
