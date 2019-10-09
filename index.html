@@ -9,7 +9,7 @@
 			First Number:<input type="text" name="entryOne"><br>
 			Second Number:<input type="text" name="entryTwo"><br>
 			Your Numbers: <span id="userInput"></span><br />
-			<input type="button" value="Submit" onClick="writeValues(form)">
+			<input type="button" value="Submit" onClick="writeValues(form)" onClick="isAmicable(form)">
 		</form>
 		<p id="demo"></p>
 		<script language="javascript">
@@ -17,6 +17,26 @@
 				var first = form.entryOne.value;
   				var second = form.entryTwo.value;
 				document.getElementById('userInput').innerHTML = first + ", " + second;
+			}
+			
+			function isAmicable(form){
+				var first = form.entryOne.value;
+  				var second = form.entryTwo.value;
+  				var factorsA = new Array();
+  				var factorsB = new Array();
+  				factorsA = getFactors(first);
+  				factorsB = getFactors(second);
+  				if ((addFactors(factorsA)) == second){
+  					if((addFactors(factorsB)) == first){
+  						document.write("The numbers: " + first + " and " + second " are amicable!")
+  					}
+  					else{
+  						document.write("The numbers: " + first + " and " + second " are NOT amicable.")
+  					}
+  				}
+  				else{
+  					document.write("The numbers: " + first + " and " + second " are NOT amicable.")
+  				}
 			}
 
 			function isFactor(num,testNum){
@@ -27,17 +47,17 @@
 					return false;
 				}
 			}
-			document.write(isFactor(10,5));
-			document.write(isFactor(50,5));
-			document.write(isFactor(43,5));
+			//document.write(isFactor(10,5));
+			//document.write(isFactor(50,5));
+			//document.write(isFactor(43,5));
 			function showFactors(numArray){
 				for(var i in numArray){
 					document.write((numArray[i])+" ");
 					}
 			}
 			//tests:
-			var a = [1,2,3,4];
-			showFactors(a);
+			//var a = [1,2,3,4];
+			//showFactors(a);
 			var sum=0;
 			function addFactors(numArray){
 				for(i=0;i<numArray.length;i+=1){
@@ -45,8 +65,8 @@
 				}
 				return sum;
 			}
-			var a = [1,2,3,5];
-			document.write(addFactors(a));
+			//var a = [1,2,3,5];
+			//document.write(addFactors(a));
 			function getFactors(num){
 				var factorArray = new Array();
 				var arraySlot = 0;
@@ -59,8 +79,8 @@
 				return factorArray;
 			}
 			//tests:
-			var a = 36;
-			document.write(getFactors(a));
+			//var a = 36;
+			//document.write(getFactors(a));
 
 		</script>
 	</body>
