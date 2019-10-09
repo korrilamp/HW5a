@@ -52,6 +52,7 @@
 					return false;
 				}
 			}
+			//Test:
 			//document.write(isFactor(10,5));
 			//document.write(isFactor(50,5));
 			//document.write(isFactor(43,5));
@@ -60,7 +61,7 @@
 					document.write((numArray[i])+", ");
 					}
 			}
-			//tests:
+			//Test:
 			//var a = [1,2,3,4];
 			//showFactors(a);
 			//var sum=0;
@@ -71,20 +72,21 @@
 				}
 				return sum;
 			}
+			//Test:
 			//var a = [1,2,3,5];
 			//document.write(addFactors(a));
 			function getFactors(num){
 				var factorArray = new Array();
 				var arraySlot = 0;
 				for(i=0;i<num;i++){
-					if(num%i == 0){
+					if(isFactor(num,i)){
 						factorArray[arraySlot] = i;
 						arraySlot++;
 					}
 				}
 				return factorArray;
 			}
-			//tests:
+			//Test:
 			//var a = 36;
 			//document.write(getFactors(a));
 
