@@ -26,15 +26,12 @@
   				var factorsB = new Array();
   				factorsA = getFactors(first);
   				factorsB = getFactors(second);
-				document.write("Factors of " + first + " are: " + (showFactors(factorsA)));
-				document.write("Factors of " + second + " are: " + (showFactors(factorsB)));
-				document.write(addFactors(factorsB));
+				document.write("Factors of " + first + " are: ");
+				showFactors(factorsA);
+				document.write("Factors of " + second + " are: ");
+				showFactors(factorsB);
 				document.write(" ");
-				document.write(addFactors(factorsA));
   				if ((addFactors(factorsA)) == second){
-					document.write("entered first conditional");
-					document.write(first);
-					document.write(second);
   					if((addFactors(factorsB)) == first){
   						document.write("The numbers are amicable!");
   					}
